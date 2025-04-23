@@ -1,0 +1,59 @@
+# kubectl cluster info 
+ 
+# kubectl create -f <pod.yml> 
+
+# kubectl apply -f <file.yml> 
+
+# kubectl get pods 
+
+# kubectl get pods -o wide 
+
+# kubectl describe pod <pod-name> 
+
+# kubectl get pods --show-labels
+
+# kubectl label pods <pod-name> <key=value>
+
+kubectl label pods <pod-name> <key=value1> <key=value2> <key-value3>  
+
+# kubectl get pods -l env=development 
+
+# kubectl get pods -l env!=development 
+
+# kubectl get pods -l 'env notin (development,testing)'
+
+# kubectl get pods -l 'env in (development,testing)'
+
+# kubectl get pods -l class=pods, myname=kavitha
+
+# kubectl deleted pod <pod.yml> 
+
+# rm -rf <pod.yml> 
+
+# kubectl delete pod <pod-name> 
+
+# kubectl delete pods -l env=development
+
+# kubectl delete pod -l env!=development
+
+# kubectl describe pods nodelabels
+
+# kubectl label nodes ip-172.63.45.21 hardware=t2-micro		=> assign label to node in order to match pod  label to node label so that each time pod get recreated it get assigned to the defined node.
+
+# kubectl get rc 
+
+# kubectl get rc -o wide 
+
+# kubectl describe rc <rc-name>
+
+# kubectl scale --replicas=5 rc myreplica
+
+#  kubectl scale --replicas=5 rc -l myname=kavitha 
+
+# kubectl get rs 
+
+# kubectl get rs -o wide 
+
+# # kubectl scale --replicas=1 rs/myrs
+
+
