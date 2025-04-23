@@ -1,0 +1,18 @@
+kind: ReplicationController   # This define to create the object of replication type             
+apiVersion: v1
+metadata:
+  name: myreplica                                                            # Replication controller Name 
+spec:
+  replicas: 2                                                                       # This element define the desire number of pods            
+  selector:                                                                         # tells the Controller which pods to watch /belong to this rc     
+    myname: kavitha                                                       # this must match the labels                             
+  template:                                                                     # template element define a element to launch a new pod   
+    metadata:
+      name: testpod6                                                    # pod name 
+      labels:                                                                    # selector value must match the labels values specified in the pod template              
+        myname: kavitha
+    spec:
+     containers:
+     - name: c00
+       image: ubuntu
+       command: ["/bin/bash", "-c", "while true; do echo Hello-Bhupinder; sleep 5 ; done"]
