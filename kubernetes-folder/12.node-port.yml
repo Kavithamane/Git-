@@ -1,0 +1,11 @@
+kind: Service                             # Defines to create Service t
+apiVersion: v1
+metadata:
+  name: demoservice
+spec:
+  ports:
+    - port: 80                               # Containers port exposed
+      targetPort: 80                     # Pods port
+  selector:
+    name: deployment                    # Apply this service to any pod
+  type: NodePort
