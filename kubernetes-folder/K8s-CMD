@@ -111,5 +111,19 @@ kubectl label pods <pod-name> <key=value1> <key=value2> <key-value3>
  
 # kubectl describe configmap mymap 
 
+# kubectl exec myvolconfig -it -- /bin/bash
+
+# kubectl exec -it myenvconfig -- /bin/bas
+
+# echo "root" > username.txt; echo "Mypassword123" >password.txt 
+
+# kubectl create secret generic mysecret --from-file=username.txt --from-file=password.txt 
+
+#  kubectl get secret
+
+# kubectl describe secret mysecret 
+
+# kubectl exec -it myvolsecret -- /bin/bash 
+
 
 
