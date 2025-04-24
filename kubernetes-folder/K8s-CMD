@@ -100,6 +100,16 @@ kubectl label pods <pod-name> <key=value1> <key=value2> <key-value3>
 
 # kubectl describe pvc <pvc-name> 
 
+# kubeclt exec -it <pod-name> -c <conatiner-name> -- ls /tmp/persistent 
+
+# kubectl create configmap <map-name> --from-file=<filetoread> 
+
+
+      eg: # kubectl create configmap mymap --from-file=sample.conf
+
+# kubectl get configmap
+ 
+# kubectl describe configmap mymap 
 
 
 
