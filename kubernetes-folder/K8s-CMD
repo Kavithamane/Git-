@@ -56,4 +56,50 @@ kubectl label pods <pod-name> <key=value1> <key=value2> <key-value3>
 
 # # kubectl scale --replicas=1 rs/myrs
 
+# kubectl get deploy 
+
+# kubectl get deploy -o wide 
+
+# kubectl describe deploy mydeployment
+
+# kubectl logs -f <pod-name> 
+
+#  kubectl rollout status deployment mydeployments
+
+# kubectl rollout history deployment mydeployments
+
+# kubectl rollout undo deployment mydeployments
+
+# kubectl rollout undo  deployment mydeployments --to-revision=2
+
+# kubectl exec -it testpod -c c00 -- bin/bash 
+
+# apt update && apt install curl          => package update and get install in container 
+
+# curl localhost:80
+
+# curl POD-IP:80 
+
+# curl custer-IP:80 
+
+# DNS-Public-IP:Assigned-Port by service 
+
+# kubectl get svc 
+
+# kubectl describe svc <service-name> 
+
+# kubectl exec -it <pod-name> -- ls /tmp/hostpath 
+
+# kubectl exec -it <pod-name> -- ls /tmp/emptyDir 
+
+# kubectl get pv 
+
+# kubectl describe pv <pv-name> 
+
+# kubectl get pvc 
+
+# kubectl describe pvc <pvc-name> 
+
+
+
 
