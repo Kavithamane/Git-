@@ -1,0 +1,20 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+   name: mydeployments
+spec:
+   replicas: 2
+   selector:          # tell controller pods to wtach / belongs to 
+    matchLabels:
+     name: deployment
+   template:
+     metadata:
+       name: testpod
+       labels:
+         name: deployment
+     spec:
+      containers:
+      - name: c00
+        image: ubuntu
+        command: ["/bin/bash", "-c", "while true; do echo Kavitha; sleep 5; done"]
+~                                      
