@@ -1,0 +1,9 @@
+---
+- name: This playbook is to create user 
+  hosts: localhost      # Target Section 
+  become: true
+  connection: ssh
+  user: kavitha_yadav
+  tasks:                     # Task Section
+  - name: Creating user sanjay
+    user: name=sanjay                         # module is user
