@@ -1,0 +1,12 @@
+---
+- name: This playbook install package's
+  hosts: localhost 
+  # become: true                             # committed become in playbook i can add -b while running ansible-playbook <file-name.yml> -b 
+  user: kavitha
+  connection: ssh
+
+  tasks:
+  - name: Installing tree package
+    apt:
+      name: tree
+      state: present
